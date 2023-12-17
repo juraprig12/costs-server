@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+  mongodb:                               # Это указано имя Базы Данных
+    image: mongo:latest
+    container_name: costs-server
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    #environment:
+      #MONGO_INITDB_ROOT_USERNAME: root
+      #MONGO_INITDB_ROOT_PASSWORD: yurapassword
+volumes:
+  mongodb-data:
+
+#Чтобы запустить MongoDB с использованием этого docker-compose.yml, выполните: docker-compose up -d  
+
